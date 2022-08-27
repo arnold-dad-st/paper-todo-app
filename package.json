@@ -1,9 +1,12 @@
 {
   "name": "paper-todo",
   "version": "0.2.0",
+  "homepage": "https://arnold-dad-st.github.com/paper-todo-app",
   "private": true,
   "dependencies": {
     "papercss": "^1.4.1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
