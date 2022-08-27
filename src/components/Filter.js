@@ -22,15 +22,15 @@ const Filter = ({todosLength, filter, onChangeFilter, onClickClear}) => {
     return (
         <Dropdown className="row flex-edges">
             <div className="col padding-small">
-                <button className="btn-small" style={todosLength ? {} : {display: 'none'}} onClick={onClickClear}>Clear</button>
+                <button className="btn-small" data-cy="clear-btn" style={todosLength ? {} : {display: 'none'}} onClick={onClickClear}>Clear</button>
             </div>
             <div className="col padding-small">
                 <div className="row flex-right margin-none">
                     <span className="padding-right-small">Show:</span>
-                    <select onChange={onChangeFilter} value={filter}>
-                        <option value={FILTER_ALL}>All</option>
-                        <option value={FILTER_ACTIVE}>Active</option>
-                        <option value={FILTER_COMPLETED}>Completed</option>
+                    <select data-cy="filter-dropdown" onChange={onChangeFilter} value={filter}>
+                        <option data-cy="filter" value={FILTER_ALL}>All</option>
+                        <option data-cy="filter" value={FILTER_ACTIVE}>Active</option>
+                        <option data-cy="filter" value={FILTER_COMPLETED}>Completed</option>
                     </select>
                 </div>                
             </div>            

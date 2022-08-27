@@ -46,15 +46,16 @@ const TodoList = ({todos, filter}) => {
             case FILTER_ACTIVE: text = 'Nothing to be completed.'; break;
             default: text = 'Chill scenes.'; break;
         }
-        message = (<div className="row flex-center margin-top-large">{text}</div>);
+        message = (<div data-cy='placeholder' className="row flex-center margin-top-large">{text}</div>);
     }       
 
     return (
         <div>
             {message}
-            <List className="child-borders">
+            <List className="child-borders" data-cy='todos' >
                 {todos.map(todo =>
                     <Todo
+                        data-cy='todo'
                         className="row"
                         key={todo.id}
                         {...todo}
